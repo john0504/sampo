@@ -123,6 +123,31 @@ components:
         text: 強
       - value: 3
         text: 弱
+      dependency:
+      - conditions:
+        - key: H01
+          op: eq
+          target: 1
+        result:
+          values:
+          - value: 1
+            text: 急
+      - conditions:
+        - key: H01
+          op: eq
+          target: 2
+        result:
+          values:
+          - value: 1
+            text: 急
+      - conditions:
+        - key: H01
+          op: eq
+          target: 3
+        result:
+          values:
+          - value: 0
+            text: 自動
       disable:
       - conditions:
         - key: H00
@@ -286,22 +311,22 @@ components:
     - key: H0F
       values:
       - value: 0
-        text: "水平"
+        text: ""
         icon: fan0
       - value: 1
-        text: "30度"
+        text: ""
         icon: fan1
       - value: 2
-        text: "45度"
+        text: ""
         icon: fan2
       - value: 3
-        text: "60度"
+        text: ""
         icon: fan3
       - value: 4
-        text: "垂直"
+        text: ""
         icon: fan4
       - value: 5
-        text: "自動"
+        text: ""
         icon: fan5
       disable:
       - conditions:
@@ -412,7 +437,7 @@ components:
         func: humi
   H15R:
     type: text
-    title: 點檢查設定
+    title: 故障訊息
     models:
     - key: H15
       values:
@@ -799,3 +824,17 @@ chartComponents:
         max: 100
         step: 1
         func: text
+      options:
+        period: 10
+integration:
+  traits:
+  - id: ac1
+    type: light
+    append_name: ""
+    description: Smart AC power
+    attributes:
+      on_off:
+        key: H00
+        values:
+          on: 1
+          off: 0

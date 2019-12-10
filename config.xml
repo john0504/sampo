@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android-versionCode="1" id="com.smarthome.hamvsampo" version="2.4.20191024" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget android-versionCode="1" id="com.smarthome.hamvsampo" version="2.4.20191205" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>聲寶HOME PLUS</name>
     <description>ExoHome App developed by Exosite.</description>
     <author email="support@exosite.com">Exosite</author>
@@ -33,8 +33,8 @@
         <splash density="port-xxhdpi" src="resources/android/splash/drawable-port-xxhdpi-screen.png" />
         <splash density="port-xxxhdpi" src="resources/android/splash/drawable-port-xxxhdpi-screen.png" />
         <config-file parent="/resources" target="./res/values/strings.xml">
-            <string name="fb_app_id">194158767928038</string>
-            <string name="fb_app_name">HAMV-CECT</string>
+            <string name="fb_app_id">442368716392935</string>
+            <string name="fb_app_name">聲寶HOME PLUS</string>
         </config-file>
     </platform>
     <platform name="ios">
@@ -97,8 +97,8 @@
     <plugin name="cordova-plugin-device" spec="^2.0.2" />
     <plugin name="cordova-plugin-email-composer" spec="^0.8.15" />
     <plugin name="cordova-plugin-facebook4" spec="^2.5.0">
-        <variable name="APP_ID" value="194158767928038" />
-        <variable name="APP_NAME" value="HAMV-CECT" />
+        <variable name="APP_ID" value="442368716392935" />
+        <variable name="APP_NAME" value="聲寶HOME PLUS" />
         <variable name="ANDROID_SDK_VERSION" value="4.33.0" />
         <variable name="FACEBOOK_ANDROID_SDK_VERSION" value="4.+" />
     </plugin>
@@ -120,7 +120,7 @@
     <plugin name="ionic-plugin-deeplinks" spec="^1.0.17">
         <variable name="URL_SCHEME" value="myproduct" />
         <variable name="DEEPLINK_SCHEME" value="myproduct" />
-        <variable name="DEEPLINK_HOST" value="hamv-tenx.apps.exosite.io" />
+        <variable name="DEEPLINK_HOST" value="sampo.apps.exosite.io" />
         <variable name="ANDROID_PATH_PREFIX" value="/" />
         <variable name="ANDROID_2_PATH_PREFIX" value="/" />
         <variable name="ANDROID_3_PATH_PREFIX" value="/" />

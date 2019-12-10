@@ -79,12 +79,12 @@
   },
   "DEVICE_CREATE": {
     "ADD_DEVICE": "新增 {{ value }}",
-    "AFTER_SETTINGS": "當您完成此步驟後，請回到 <a ion-text color=\"bluish\">{{ productName }}</a> app 繼續設定。",
+    "AFTER_SETTINGS": "Wi-Fi熱點代號 例:<a ion-text color=\"bluish\">{{ wifiName }}</a>。",
     "CHOOSE_HOTSPOT": "選擇熱點",
     "CONNECT_TO_DEVICE": "連接您的裝置",
     "CONTINUE": "繼續",
-    "GO_TO_SETTINGS": "前往設定頁面",
-    "HOW_TO_BEGIN": "您的 <a ion-text color=\"bluish\">{{ productName }}</a> 會出現一個像 \"<a ion-text color=\"bluish\">{{ wifiName }}</a>\" 的臨時 Wi-Fi熱點，必須先將手機連接到您要設定的 <a ion-text color=\"bluish\">{{ productName }}</a>。",
+    "GO_TO_SETTINGS": "開始搜尋 SAMPO Wi-Fi 熱點",
+    "HOW_TO_BEGIN": "",
     "ALERT_OK": "確定",
     "ALERT_NO_THANKS": "不了，謝謝",
     "ENABLE_LOCATION_SERVICE_TITLE": "啟用地點服務？",
@@ -111,7 +111,7 @@
     "SUPPORT_MODE_LEAVE": "離開工程模式"
   },
   "DEVICE_DETAIL": {
-    "HISTORY": "歷史",
+    "HISTORY": "消耗電量",
     "SCHEDULES": "排程",
     "SETTINGS": "設定",
     "SHARE": "分享",
@@ -124,7 +124,7 @@
     "GET_RANGE": "取得裝置資訊..."
   },
   "DEVICE_HISTORY": {
-    "HISTORY": "歷史"
+    "HISTORY": "消耗電量"
   },
   "DEVICE_SETTINGS": {
     "CANCEL": "取消",

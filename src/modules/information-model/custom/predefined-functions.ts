@@ -100,6 +100,22 @@ export const functionMap = {
       icon: 'time',
     };
   },
+  useTimerHour: (val) => {
+    if (val === -32767) {
+      return {
+        value: val,
+        text: '使用時間--小時',
+        icon: 'time',
+      };
+    }
+    let hour = val;
+    let hourS = hour < 10 ? '0' + hour : hour + '';
+    return {
+      value: val,
+      text: '使用時間' + hourS + '小時',
+      icon: 'time',
+    };
+  },
   dust: (val) => {
     if (val < 0) {
       return {
@@ -284,6 +300,18 @@ export const functionMap = {
     return {
       value: val,
       text: round(val * 10, 2) + '',
+    };
+  },
+  time10: (val) => {
+    if (val === -32767) {
+      return {
+        value: val,
+        text: '--',
+      };
+    }
+    return {
+      value: val,
+      text: round(val / 10, 1) + '',
     };
   },
   tempInt8: (val) => {

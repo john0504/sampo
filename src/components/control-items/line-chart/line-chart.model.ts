@@ -42,7 +42,7 @@ export class LineChartModel {
     },
     series: [
       {
-        type: 'line',
+        type: 'bar',
         areaStyle: { normal: {} },
         smooth: true,
         symbolSize: 13,

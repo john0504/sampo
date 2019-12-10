@@ -36,10 +36,13 @@
       <button ion-button color="primary" class="full-button" full round (click)="nativeSettings.open('wifi')" margin-vertical>
         {{ 'DEVICE_CREATE.GO_TO_SETTINGS' | translate }}
       </button>
-      <p align="center" [innerHTML]="'DEVICE_CREATE.AFTER_SETTINGS' | translate: { productName: (appName | async) }"></p>
+      <p align="center" [innerHTML]="'DEVICE_CREATE.AFTER_SETTINGS' | translate: { wifiName: themeService.wifiName }"></p>
     </div>
     <div>
-      <button ion-button color="primary" class="bottom-button full-button" [disabled]="!canContinue"  (click)="onNext()" full>{{ 'DEVICE_CREATE.CONTINUE' | translate }}</button>
+      <button ion-button color="primary" class="bottom-button full-button" [disabled]="!canContinue" (click)="onNext()" full>
+        <ion-spinner *ngIf="!canContinue"></ion-spinner>
+        {{ 'DEVICE_CREATE.CONTINUE' | translate }}
+      </button>
     </div>
   </div>
   <extra-page-space></extra-page-space>

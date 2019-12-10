@@ -88,14 +88,14 @@ components:
       - value: 0
         text: 感測中
       - value: 1
-        text: 高
+        text: 很好
       - value: 2
-        text: 中
+        text: 普通
       - value: 3
-        text: 低
+        text: 不良
   H07:
     type: toggle
-    title: 負離子
+    title: PICOPURE水離子
     models:
     - key: H07
       values:
@@ -132,7 +132,7 @@ components:
         min: 1
         max: 2000
         step: 1
-        func: timerHour
+        func: useTimerHour
       options: 
         type: 'uint'
       disable:
@@ -186,7 +186,7 @@ components:
           target: 0
   H63R:
     type: text
-    title: 初始運轉時間
+    title: 入電運轉時間
     models:
     - key: H63
       values:

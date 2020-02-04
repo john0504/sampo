@@ -4,20 +4,30 @@
       <ion-icon name="ios-arrow-back"></ion-icon>
     </button>
     <div class="range-text" [innerHtml]="dtSelector.rangeItem.rangeText"></div>
-    <button class="range-button" ion-button clear round icon-only (click)="changeRange(1)" [disabled]="!dtSelector.canForward()">
+    <button class="range-button" ion-button clear round icon-only (click)="changeRange(1)"
+      [disabled]="!dtSelector.canForward()">
       <ion-icon name="ios-arrow-forward"></ion-icon>
     </button>
   </div>
   <echarts-core [options]="_options" [merge]="_mergeOptions" [empty]="_noData"></echarts-core>
   <div class="control-area">
-    <button class="filter-button" ion-button clear round [ngClass]="{'filter-button-active': dtSelector.period === 'week'}" (click)="changePeriod('week')">
+    <button class="filter-button" ion-button clear round
+      [ngClass]="{'filter-button-active': dtSelector.period === 'week'}" (click)="changePeriod('week')">
       {{ 'HISTORICAL_CHART.PERIOD_WEEK' | translate }}
     </button>
-    <button class="filter-button" ion-button clear round [ngClass]="{'filter-button-active': dtSelector.period === 'month'}" (click)="changePeriod('month')">
+    <button class="filter-button" ion-button clear round
+      [ngClass]="{'filter-button-active': dtSelector.period === 'month'}" (click)="changePeriod('month')">
       {{ 'HISTORICAL_CHART.PERIOD_MONTH' | translate }}
     </button>
-    <button class="filter-button" ion-button clear round [ngClass]="{'filter-button-active': dtSelector.period === 'year'}" (click)="changePeriod('year')">
+    <button class="filter-button" ion-button clear round
+      [ngClass]="{'filter-button-active': dtSelector.period === 'year'}" (click)="changePeriod('year')">
       {{ 'HISTORICAL_CHART.PERIOD_YEAR' | translate }}
     </button>
+  </div>
+  <br>
+  <div class="control-area">
+    註：以上電量數據僅供參考使用，
+    <br>
+    實際請以台灣電力公司電費單據為主。
   </div>
 </div>

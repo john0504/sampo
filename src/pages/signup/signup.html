@@ -15,19 +15,20 @@
         <div></div>
         <ion-item>
           <ion-label floating color="darkGrey">{{ 'SIGNUP.EMAIL' | translate }}</ion-label>
-          <ion-input [(ngModel)]="signup.username" name="username" type="email" #username="ngModel" spellcheck="false" autocapitalize="off"
-            maxlength="100" [pattern]="userV" required myTabIndex="1">
+          <ion-input [(ngModel)]="signup.username" name="username" type="email" #username="ngModel" spellcheck="false"
+            autocapitalize="off" maxlength="100" [pattern]="userV" required myTabIndex="1">
           </ion-input>
         </ion-item>
         <ion-item class="input-with-eye-toggle">
           <ion-label floating color="darkGrey">{{ 'SIGNUP.PASSWORD' | translate }}</ion-label>
-          <ion-input [(ngModel)]="signup.password" name="password" [type]="inputType" #password="ngModel" required myTabIndex="2" clearOnEdit="false">
+          <ion-input [(ngModel)]="signup.password" name="password" [type]="inputType" #password="ngModel" minlength="8"
+            maxlength="20" required myTabIndex="2" clearOnEdit="false">
           </ion-input>
           <button (click)="onShowHidePassword()" ion-button icon-only clear item-right type="button">
             <ion-icon [name]="iconName" color="dark"></ion-icon>
           </button>
         </ion-item>
-         <div class="divider"></div>
+        <div class="divider"></div>
         <div class="userConsent">
           <ion-checkbox color="primary" [(ngModel)]="userConsent" [ngModelOptions]="{standalone: true}"></ion-checkbox>
           <p class="description">
@@ -36,7 +37,8 @@
           </p>
         </div>
         <div class="divider"></div>
-        <button ion-button color="primary" class="full-button" [disabled]="!signupForm.valid || !userConsent" type="submit" round full>{{ 'SIGNUP.CREATE_ACCOUNT' | translate }}</button>
+        <button ion-button color="primary" class="full-button" [disabled]="!signupForm.valid || !userConsent"
+          type="submit" round full>{{ 'SIGNUP.CREATE_ACCOUNT' | translate }}</button>
         <div class="divider"></div>
       </ion-list>
     </form>

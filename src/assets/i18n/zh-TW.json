@@ -83,7 +83,7 @@
     "CHOOSE_HOTSPOT": "選擇熱點",
     "CONNECT_TO_DEVICE": "連接您的裝置",
     "CONTINUE": "繼續",
-    "GO_TO_SETTINGS": "開始搜尋 SAMPO Wi-Fi 熱點",
+    "GO_TO_SETTINGS": "開始搜尋 SAMPO Wi-Fi 代號",
     "HOW_TO_BEGIN": "",
     "ALERT_OK": "確定",
     "ALERT_NO_THANKS": "不了，謝謝",
@@ -113,7 +113,7 @@
   "DEVICE_DETAIL": {
     "HISTORY": "消耗電量",
     "SCHEDULES": "排程",
-    "SETTINGS": "設定",
+    "SETTINGS": "裝置",
     "SHARE": "分享",
     "CANCEL": "取消",
     "OK": "確定",
@@ -186,7 +186,7 @@
     "OK": "確定",
     "PWD_RESET_MSG": "請檢查您的信箱收件夾並依照指示重設您的密碼。",
     "PWD_RESET_TITLE": "密碼重設信已寄出",
-    "RESET_PWD": "重設密碼",
+    "RESET_PWD": "重新傳送註冊密碼郵件",
     "SENDING": "讀取中...",
     "USER_NOT_EXIST": "使用者不存在"
   },

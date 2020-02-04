@@ -79,6 +79,11 @@ components:
       - value: "*"
         text: ''
       default: 1
+      disable:
+      - conditions:
+        - key: H00
+          op: eq
+          target: 0
   H04R:
     type: text
     title: 空氣清淨度
@@ -215,7 +220,7 @@ integration:
   traits:
   - id: ac1
     type: light
-    append_name: " power"
+    append_name: ""
     description: Smart AC power
     attributes:
       on_off:

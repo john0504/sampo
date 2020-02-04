@@ -20,10 +20,21 @@ export class EchartsDatasetTransform implements DataTransform {
         },
       };
 
-      history.forEach(data => {
+      // history.forEach(data => {
+      //   const d = new Date(data.time);
+      //   const dateString = this.getDateTimeString(d, timePeriodFilter);
+      //   const v = this.getDataValue(data.value, aggregate);
+      //   const item = [dateString, v];
+      //   series.push(item);
+      // });
+      history.forEach((data, i) => {
+        if (i + 1 === history.length) return;
         const d = new Date(data.time);
         const dateString = this.getDateTimeString(d, timePeriodFilter);
-        const v = this.getDataValue(data.value, aggregate);
+        const currentValue = this.getDataValue(data.value, aggregate);
+        const nextData = history[i + 1];
+        const nextValue = this.getDataValue(nextData.value, aggregate);
+        const v = nextValue - currentValue;
         const item = [dateString, v];
         series.push(item);
       });

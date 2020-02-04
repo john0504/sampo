@@ -127,12 +127,19 @@ export class RangeLogic extends LogicBase<RangeLogicState> {
             min_value = value >> 16;
             max_value = value & 0xFFF;
           }
-
-          this.state.status = {
-            min: min_value,
-            max: max_value,
-            step: 1,
-          };
+          if (values instanceof Array) {
+            this.state.status = {
+              min: min_value,
+              max: max_value,
+              step: 1,
+            };
+          } else {
+            this.state.status = {
+              min: min_value,
+              max: max_value,
+              step: values.step,
+            };
+          }
         } else if (element[key2]) {
           let value: number = element[key2];
           let min_value: number = value >> 8;
@@ -150,11 +157,19 @@ export class RangeLogic extends LogicBase<RangeLogicState> {
             max_value = value & 0xFFF;
           }
 
-          this.state.status = {
-            min: min_value,
-            max: max_value,
-            step: 1,
-          };
+          if (values instanceof Array) {
+            this.state.status = {
+              min: min_value,
+              max: max_value,
+              step: 1,
+            };
+          } else {
+            this.state.status = {
+              min: min_value,
+              max: max_value,
+              step: values.step,
+            };
+          }
         }
       });
     } else

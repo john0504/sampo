@@ -142,6 +142,18 @@ export const functionMap = {
       text: round(val, 2) + '',
     };
   },
+  degree: (val) => {
+    if (val === undefined || val === null || val === -32767) {
+      return {
+        value: val,
+        text: '度',
+      };
+    }
+    return {
+      value: val,
+      text: round(val, 2) + '度',
+    };
+  },
   airbox_humi: (val) => {
     if (val === -32767) {
       return {

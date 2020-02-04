@@ -186,23 +186,17 @@ export class LineChart extends UIComponentBase implements OnInit, OnDestroy {
     results.forEach((historicalData, index) => {
 
       let count = 0;
-      // let sum = 0;
       historicalData.forEach(element => {
         const v = this.getDataValue(element.value, this.aggregateMethod);
         if (typeof v === 'number') {
           element.value[this.aggregateMethod] = element.value[this.aggregateMethod] / this.period;
-          // sum += element.value[this.aggregateMethod];
           count++;
         }
       });
       this._noData = count <= 0;
-      // let avgText = "";
-      // if (this._noData) {
-      //   avgText = this._modelCallback(-32767, index);
-      // } else {
-      //   avgText = this._modelCallback(sum / count, index);
-      // }
-      // const g = this._lineChartModel.averageTag(avgText);
+      let avgText = this._modelCallback(-32767, index);
+      
+      const g = this._lineChartModel.unitTag(avgText);
 
       const echartModel = this.transform.transform({
         historicalData,
@@ -214,7 +208,7 @@ export class LineChart extends UIComponentBase implements OnInit, OnDestroy {
         aggregate: this.aggregateMethod
       });
 
-      // echartModel.graphic = [g];
+      echartModel.graphic = [g];
       this._mergeOptions = echartModel;
     });
   }

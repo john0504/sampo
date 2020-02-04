@@ -40,7 +40,6 @@ controlLayout:
   - H1E
   - H1F
   - H20
-  - H21R
   - H22R
   - H23R
   - H2F
@@ -118,11 +117,11 @@ components:
       - value: 0
         text: 自動
       - value: 1
-        text: 急
+        text: 弱
       - value: 2
         text: 強
       - value: 3
-        text: 弱
+        text: 急
       dependency:
       - conditions:
         - key: H01
@@ -131,7 +130,7 @@ components:
         result:
           values:
           - value: 1
-            text: 急
+            text: 弱
       - conditions:
         - key: H01
           op: eq
@@ -139,6 +138,10 @@ components:
         result:
           values:
           - value: 1
+            text: 弱
+          - value: 2
+            text: 強
+          - value: 3
             text: 急
       - conditions:
         - key: H01
@@ -264,7 +267,12 @@ components:
         text: 關閉
       - value: "*"
         text: ''
-      default: 1
+      default: 30
+      disable:
+      - conditions:
+        - key: H00
+          op: eq
+          target: 1
   H0C:
     type: range-with-toggle
     title: 定時關機
@@ -273,7 +281,7 @@ components:
       values:
         min: 30
         max: 1440
-        step: 1
+        step: 30
         func: timer
       options: 
         type: 'uint16'
@@ -283,7 +291,7 @@ components:
         text: 關閉
       - value: "*"
         text: ''
-      default: 1
+      default: 30
       disable:
       - conditions:
         - key: H00
@@ -823,7 +831,7 @@ chartComponents:
         min: 0
         max: 100
         step: 1
-        func: text
+        func: degree
       options:
         period: 10
 integration:

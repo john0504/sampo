@@ -57,6 +57,29 @@ export class LineChartModel {
     return `${params.marker} ${pText}<br>`;
   }
 
+  public unitTag(avg: string) {
+    const averageText = {
+      type: 'text',
+      left: 'center',
+      top: 'center',
+      z: 100,
+      style: {
+        text: avg,
+        font: '1.5rem'
+      }
+    };
+    const graph = {
+      type: 'group',
+      bounding: 'raw',
+      left: 25,
+      top: 40,
+      z: 100,
+      children: [averageText]
+    };
+
+    return graph;
+  }
+
   public averageTag(avg: string) {
     const averageText = {
       type: 'text',
